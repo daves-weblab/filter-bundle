@@ -1,0 +1,13 @@
+{
+  "name": "daves-weblab/filter-bundle",
+  "version": "0.1",
+  "license": "GPL-3.0-or-later",
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  }
+}
