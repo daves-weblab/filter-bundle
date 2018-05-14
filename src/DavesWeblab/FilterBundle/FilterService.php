@@ -52,23 +52,6 @@ class FilterService
     }
 
     /**
-     * @param AbstractListing $listing
-     * @param string $filteredListingClass
-     *
-     * @return FilteredListing
-     */
-    public function createDefinitiveFilteredListing(AbstractListing $listing, string $filteredListingClass)
-    {
-        $filteredListing = $this->createFilteredListing($listing);
-
-        if (!is_a($filteredListing, $filteredListingClass)) {
-            throw new \InvalidArgumentException("Listing [" . get_class($listing) . "] could not be transformed into a [{$filteredListingClass}]. Resulted in a [" . get_class($filteredListing) . "]");
-        }
-
-        return $filteredListing;
-    }
-
-    /**
      * @param Listing $listing
      *
      * @return Model\DataObject\FilteredListing
